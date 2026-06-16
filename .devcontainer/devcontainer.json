@@ -1,0 +1,39 @@
+{
+  "name": "React-Bun-TSX-Apache",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": true
+    },
+    "ghcr.io/devcontainers-contrib/features/bun:1": {}
+  },
+  "forwardPorts": [80, 5173],
+  "portsAttributes": {
+    "80": {
+      "label": "Apache Web Server",
+      "onAutoForward": "notify"
+    },
+    "5173": {
+      "label": "Vite/Bun Dev Server",
+      "onAutoForward": "ignore"
+    }
+  },
+  "postStartCommand": "mkdir -p dist && sudo service apache2 start",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ovvesley.bun-vscode",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
