@@ -21,7 +21,8 @@
       "onAutoForward": "ignore"
     }
   },
-  "postStartCommand": "mkdir -p dist && sudo service apache2 start",
+  "postStartCommand": "mkdir -p dist && sudo service apache2 start && bun run lint",
+  "postCreateCommand": "bun install && bun run lint",
   "customizations": {
     "vscode": {
       "settings": {
