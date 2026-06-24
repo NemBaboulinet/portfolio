@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+@theme {
+    --background-image-bg2: url('/img/bg2.png');
+}
