@@ -6,7 +6,6 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-	console.log('Layout', Layout);
 	return (
 		<div className="relative min-h-screen w-full flex flex-col overflow-hidden bg-gray-950 text-green">
 			{/* Arrière-plan interactif Antigravity */}

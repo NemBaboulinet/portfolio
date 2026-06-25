@@ -236,7 +236,6 @@ const AntigravityInner: React.FC<AntigravityProps> = ({
 };
 
 const Antigravity: React.FC<AntigravityProps> = (props) => {
-	console.log('Antigravity props:', props); // Log the props to the console for debugging
 	return (
 		<Canvas camera={{ position: [0, 0, 50], fov: 35 }}>
 			<AntigravityInner {...props} />

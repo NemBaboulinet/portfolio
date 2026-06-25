@@ -3,7 +3,6 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-    --background-image-bg2: url('/img/bg2.png');
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-card: var(--card);
