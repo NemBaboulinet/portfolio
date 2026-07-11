@@ -1,25 +1,6 @@
-import React, { useMemo, useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import React, { useMemo, useRef } from 'react';
 import * as THREE from 'three';
-
-interface Particle {
-	t: number;
-	factor: number;
-	speed: number;
-	xFactor: number;
-	yFactor: number;
-	zFactor: number;
-	mx: number;
-	my: number;
-	mz: number;
-	cx: number;
-	cy: number;
-	cz: number;
-	vx: number;
-	vy: number;
-	vz: number;
-	randomRadiusOffset: number;
-}
 
 interface AntigravityProps {
 	count?: number;
@@ -60,12 +41,12 @@ const AntigravityInner: React.FC<AntigravityProps> = ({
 	const { viewport } = useThree();
 	const dummy = useMemo(() => new THREE.Object3D(), []);
 
-	const lastMousePos = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
-	const lastMouseMoveTime = useRef<number>(0);
-	const virtualMouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+	const lastMousePos = useRef({ x: 0, y: 0 });
+	const lastMouseMoveTime = useRef(0);
+	const virtualMouse = useRef({ x: 0, y: 0 });
 
-	const particles = useMemo<Particle[]>(() => {
-		const temp: Particle[] = [];
+	const particles = useMemo(() => {
+		const temp = [];
 		const width = viewport.width || 100;
 		const height = viewport.height || 100;
 
@@ -142,10 +123,10 @@ const AntigravityInner: React.FC<AntigravityProps> = ({
 		const globalRotation = state.clock.getElapsedTime() * rotationSpeed;
 
 		particles.forEach((particle, i) => {
+			let t = particle.t;
 			const { speed, mx, my, mz, cz, randomRadiusOffset } = particle;
 
-			particle.t += speed / 2;
-			const t = particle.t;
+			t = particle.t += speed / 2;
 
 			const projectionFactor = 1 - cz / 50;
 			const projectedTargetX = targetX * projectionFactor;
@@ -186,10 +167,8 @@ const AntigravityInner: React.FC<AntigravityProps> = ({
 			dummy.rotateX(Math.PI / 2);
 
 			const currentDistToMouse = Math.sqrt(
-				(particle.cx - projectedTargetX) *
-					(particle.cx - projectedTargetX) +
-					(particle.cy - projectedTargetY) *
-						(particle.cy - projectedTargetY),
+				Math.pow(particle.cx - projectedTargetX, 2) +
+					Math.pow(particle.cy - projectedTargetY, 2),
 			);
 
 			const distFromRing = Math.abs(currentDistToMouse - ringRadius);
@@ -212,14 +191,7 @@ const AntigravityInner: React.FC<AntigravityProps> = ({
 	});
 
 	return (
-		<instancedMesh
-			ref={meshRef}
-			args={[
-				null as unknown as THREE.BufferGeometry,
-				null as unknown as THREE.Material,
-				count,
-			]}
-		>
+		<instancedMesh ref={meshRef} args={[undefined, undefined, count]}>
 			{particleShape === 'capsule' && (
 				<capsuleGeometry args={[0.1, 0.4, 4, 8]} />
 			)}
