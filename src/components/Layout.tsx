@@ -8,7 +8,10 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
 	const containerRef = useRef<HTMLDivElement>(null);
 	return (
-		<div ref={containerRef} className="relative min-h-screen w-full flex flex-col overflow-hidden bg-gray-950 text-green">
+		<div
+			ref={containerRef}
+			className="relative min-h-screen w-full flex flex-col overflow-hidden bg-gray-950 text-green"
+		>
 			{/* Arrière-plan interactif Antigravity */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
 				<Antigravity
