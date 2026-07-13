@@ -20,6 +20,7 @@ export default tseslint.config(
     rules: {
       ...reactPlugin.configs.recommended.rules,
       'react/react-in-jsx-scope': 'off',
+      'react/no-unknown-property': ['error', { ignore: ['args'] }],
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
       ...prettierConfig.rules,
