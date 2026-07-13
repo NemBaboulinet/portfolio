@@ -10,7 +10,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<div ref={containerRef} className="relative min-h-screen w-full flex flex-col overflow-hidden bg-gray-950 text-green">
 			{/* Arrière-plan interactif Antigravity */}
-			<div className="absolute inset-0 overflow-hidden">
+			<div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
 				<Antigravity
 					eventSource={containerRef}
 					count={150}
