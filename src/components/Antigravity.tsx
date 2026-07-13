@@ -18,6 +18,7 @@ interface AntigravityProps {
 	pulseSpeed?: number;
 	particleShape?: 'capsule' | 'sphere' | 'box' | 'tetrahedron';
 	fieldStrength?: number;
+	eventSource?: React.RefObject<HTMLElement>;
 }
 
 const AntigravityInner: React.FC<AntigravityProps> = ({
@@ -209,7 +210,7 @@ const AntigravityInner: React.FC<AntigravityProps> = ({
 
 const Antigravity: React.FC<AntigravityProps> = (props) => {
 	return (
-		<Canvas camera={{ position: [0, 0, 50], fov: 35 }}>
+		<Canvas camera={{ position: [0, 0, 50], fov: 35 }} eventSource={props.eventSource}>
 			<AntigravityInner {...props} />
 		</Canvas>
 	);
