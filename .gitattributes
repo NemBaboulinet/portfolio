@@ -1,0 +1,9 @@
+# Force LF line endings for all text files to prevent issues when mounting on Linux dev containers from Windows host
+* text=auto eol=lf
+
+# Explicitly set binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
