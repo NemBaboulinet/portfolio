@@ -34,13 +34,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 				/>
 			</div>
 
-			<header className="relative z-30 w-full shrink-0">
-				<nav className="flex flex-row items-center justify-between p-6 max-w-7xl mx-auto text-amber-200 font-medium">
-					<div>Kevin Bytebier</div>
-				</nav>
-			</header>
+			<header className="absolute w-full shrink-0 z-30"></header>
 
-			<main className="relative z-10 flex-1 w-full overflow-y-auto snap-y snap-mandatory scroll-smooth">
+			<main className="relative z-10 flex-1 w-full overflow-y-auto snap-y snap-mandatory scroll-smooth bg-linear-to-tr from-black from-50% to-lime-700 bg-fixed">
 				{children}
 			</main>
 		</div>
