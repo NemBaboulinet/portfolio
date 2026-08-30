@@ -124,10 +124,9 @@ const AntigravityInner: React.FC<AntigravityProps> = ({
 		const globalRotation = state.clock.getElapsedTime() * rotationSpeed;
 
 		particles.forEach((particle, i) => {
-			let t = particle.t;
 			const { speed, mx, my, mz, cz, randomRadiusOffset } = particle;
 
-			t = particle.t += speed / 2;
+			const t = (particle.t += speed / 2);
 
 			const projectionFactor = 1 - cz / 50;
 			const projectedTargetX = targetX * projectionFactor;
@@ -212,7 +211,11 @@ const Antigravity: React.FC<AntigravityProps> = (props) => {
 	return (
 		<Canvas
 			camera={{ position: [0, 0, 50], fov: 35 }}
-			eventSource={props.eventSource}
+			eventSource={
+				props.eventSource as
+					| React.MutableRefObject<HTMLElement>
+					| undefined
+			}
 			eventPrefix="client"
 		>
 			<AntigravityInner {...props} />
