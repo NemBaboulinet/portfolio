@@ -16,7 +16,7 @@ export default function Section({
 	return (
 		<section
 			id={id}
-			className={`h-screen w-full snap-start snap-always flex flex-col justify-center items-center ${bgStyle || 'bg-linear-to-tr from-black from-50% to-lime-700'}${className}`}
+			className={`h-screen w-full snap-start snap-always flex flex-col justify-center items-center ${bgStyle} ${className}`}
 		>
 			{children}
 		</section>
