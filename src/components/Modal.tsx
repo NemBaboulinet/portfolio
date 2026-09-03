@@ -1,38 +1,34 @@
-import { Button, Modal } from 'antd';
+import { Modal } from 'antd';
+import { useEffect } from 'react';
 
 const WarningModal: React.FC = () => {
 	const [modal, contextHolder] = Modal.useModal();
-
-	const countdown = () => {
-		let seconds = 5;
-
-		const instance = modal.success({
-			title: 'Work in progress',
-			content:
-				'This portfolio is currently under construction. Please check back later for updates. this modal will destroy in ' +
-				seconds +
-				' secondes',
-		});
-
-		const timer = setInterval(() => {
-			seconds -= 1;
-			instance.update({
-				content: 'this modal will destroy in ' + seconds + ' secondes',
+	useEffect(() => {
+		const alReadyShown = sessionStorage.getItem('warningShown');
+		if (!alReadyShown) {
+			let seconds = 7;
+			const getMessage = (s: number) =>
+				`This portfolio is currently under construction. Please check back later for updates. This modal will close in ${s} seconds`;
+			const instance = modal.success({
+				title: 'Work in progress',
+				content: getMessage(seconds),
 			});
-		}, 1000);
 
-		setTimeout(() => {
-			clearInterval(timer);
-			instance.destroy();
-		}, seconds * 1000);
-	};
+			const timer = setInterval(() => {
+				seconds -= 1;
+				instance.update({
+					content: getMessage(seconds),
+				});
+			}, 1000);
 
-	return (
-		<>
-			<Button onClick={countdown}>Work in progress</Button>
-			{contextHolder}
-		</>
-	);
+			setTimeout(() => {
+				clearInterval(timer);
+				instance.destroy();
+			}, seconds * 1000);
+			sessionStorage.setItem('warningShown', 'true');
+		}
+	}, [modal]);
+	return contextHolder;
 };
 
 export default WarningModal;
