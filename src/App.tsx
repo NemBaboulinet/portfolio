@@ -17,7 +17,7 @@ export default function App() {
 						label: 'Introduction',
 					},
 					{
-						id: 'gitistoric',
+						id: 'gitHistoric',
 						label: 'Historique Git',
 					},
 				]}
