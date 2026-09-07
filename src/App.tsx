@@ -1,6 +1,7 @@
 import WarningModal from './components/Modal';
 import Section from './components/Section';
 import { SectionNav } from './components/SectionNav';
+import GitHistoric from './components/GitHistoric';
 
 export default function App() {
 	return (
@@ -15,6 +16,10 @@ export default function App() {
 						id: 'intro',
 						label: 'Introduction',
 					},
+					{
+						id: 'gitistoric',
+						label: 'Historique Git',
+					},
 				]}
 			></SectionNav>
 			<Section id="hero">
@@ -28,6 +33,9 @@ export default function App() {
 				<text className="text-8xl text-white font-bold">
 					Portfolio in progress
 				</text>
+			</Section>
+			<Section id="gitHistoric">
+				<GitHistoric />
 			</Section>
 		</>
 	);
