@@ -10,10 +10,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<div
 			ref={containerRef}
-			className="relative h-screen w-full flex flex-col overflow-hidden bg-gray-950 text-green"
+			className="relative h-screen w-full flex flex-col overflow-hidden bg-linear-to-tr from-black from-50% to-lime-700 bg-fixed text-green"
 		>
 			{/* Arrière-plan interactif Antigravity */}
-			<div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
+			<div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
 				<Antigravity
 					eventSource={containerRef}
 					count={150}
@@ -36,7 +36,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 			<header className="absolute w-full shrink-0 z-30"></header>
 
-			<main className="relative z-10 flex-1 w-full overflow-y-auto snap-y snap-mandatory scroll-smooth bg-linear-to-tr from-black from-50% to-lime-700 bg-fixed">
+			<main className="relative z-10 flex-1 w-full overflow-y-auto snap-y snap-mandatory scroll-smooth">
 				{children}
 			</main>
 		</div>
