@@ -10,7 +10,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<div
 			ref={containerRef}
-			className="relative h-screen w-full flex flex-col overflow-hidden bg-linear-to-tr from-black from-50% to-lime-700 bg-fixed text-green"
+			className="relative h-dvh w-full flex flex-col overflow-hidden bg-linear-to-tr from-black from-50% to-lime-700 bg-fixed text-green"
 		>
 			{/* Arrière-plan interactif Antigravity */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none z-0">

@@ -68,7 +68,7 @@ export default function Changelog() {
 			<h2 className="text-2xl font-bold text-white mb-4">
 				Pour suivre l&apos;évolution de mon travail
 			</h2>
-			<ul className=" flex flex-col gap-4 text-left max-w-2xl w-full border border-lime-400/60 rounded-lg p-8 backdrop-blur-xl bg-accent/10">
+			<ul className=" flex flex-col gap-4 text-left max-w-2xl w-full border border-lime-400/60 rounded-lg p-4 sm:p-6 md:p-8 backdrop-blur-xl bg-accent/10">
 				{commits.map((commit) => (
 					<li
 						key={commit.sha}
@@ -81,7 +81,7 @@ export default function Changelog() {
 							href={commit.url}
 							target="_blank"
 							rel="noreferrer"
-							className="hover:text-white transition-colors"
+							className="hover:text-white transition-colors min-w-0 break-words"
 						>
 							{commit.message}
 						</a>

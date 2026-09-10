@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.3.4",
     "@eslint/js": "^10.0.1",
     "@react-three/fiber": "8.17.10",
     "@tailwindcss/vite": "^4.3.1",
