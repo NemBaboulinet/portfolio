@@ -2,10 +2,10 @@ import WarningModal from './components/Modal';
 import Section from './components/Section';
 import { SectionNav } from './components/SectionNav';
 import GitHistoric from './components/GitHistoric';
+import AboutMe from './components/AboutMe';
+import { H2 } from './components/TextStyle';
 
 export default function App() {
-	const title =
-		'text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text_9xl font-bold text-white';
 	return (
 		<>
 			<SectionNav
@@ -26,11 +26,10 @@ export default function App() {
 			></SectionNav>
 			<Section id="hero">
 				<WarningModal />
-
-				<text className={title}>Kevin BYTEBIER</text>
+				<H2>Kevin BYTEBIER</H2>
 			</Section>
 			<Section id="aboutMe">
-				<text className={title}>A propos de moi</text>
+				<AboutMe />
 			</Section>
 			<Section id="gitHistoric">
 				<GitHistoric />
