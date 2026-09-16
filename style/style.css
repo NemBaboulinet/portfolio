@@ -45,7 +45,7 @@
 }
 
 @theme {
-        --color-lime-accent: #9be800;
+        --color-lime-accent: #9be800; /* /20 pour les border */
 }
 
 :root {
