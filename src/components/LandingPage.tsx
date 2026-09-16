@@ -8,7 +8,7 @@ export default function LandingPage() {
 			<div className="w-full max-w-165 rounded-xl bg-[#0a0c07] border border-[#9BE800]/20 shadow-2xl overflow-hidden">
 				{/* barre de titre */}
 				<div className="h-10 flex items-center gap-2 px-4 bg-[#12140d] border-b border-white/5 relative">
-					<span className="w-2.75 h-2.75 rounded-full bg-red" />
+					<span className="w-2.75 h-2.75 rounded-full bg-[#ff5f56]" />
 					<span className="w-2.75 h-2.75 rounded-full bg-[#ffbd2e]" />
 					<span className="w-2.75 h-2.75 rounded-full bg-[#27c93f]" />
 					<span className="absolute left-1/2 -translate-x-1/2 font-mono text-xs text-white/40">
@@ -54,7 +54,7 @@ export default function LandingPage() {
 					</a>
 					<p>
 						<span className="text-lime-accent">❯</span>{' '}
-						<span className="inline-block w-2.25 h-4.35 bg-lime-accent align-[-3px] animate-[blink_1.1s_step-end_infinite]" />
+						<span className="inline-block w-2.25 h-4.25 bg-lime-accent align-[-3px] animate-[blink_1.1s_step-end_infinite]" />
 					</p>
 				</div>
 			</div>
