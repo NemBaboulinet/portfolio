@@ -21,7 +21,7 @@ type SectionNavProps = {
 export function SectionNav({
 	items,
 	scrollerRef,
-	accentColor = 'lime-accent',
+	accentColor = 'var(--color-lime-accent)',
 	keyboard = true,
 }: SectionNavProps) {
 	const [activeIndex, setActiveIndex] = useState(0);
