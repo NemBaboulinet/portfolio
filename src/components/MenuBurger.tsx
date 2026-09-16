@@ -14,7 +14,7 @@ export function MenuBurger({
 	items,
 	activeIndex,
 	goToSection,
-	accentColor = '#9BE800',
+	accentColor = 'lime-accent',
 }: MenuBurgerProps) {
 	const [isOpen, setIsOpen] = useState(false);
 

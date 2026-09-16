@@ -16,10 +16,11 @@ export default function AboutMe() {
 				<Citation>«Du brûleur au clavier»</Citation>
 				<TextContent>
 					Après plus de 15 ans d&apos;expérience professionnelle dans
-					le domaine technique, le management et l&apos;aérostation,
-					j&apos;ai fait le choix de donner un nouveau cap à ma
-					carrière en me reconvertissant dans ce qui me passionne
-					depuis toujours : le développement web et software.
+					le domaine technique, le management et l&apos;aérostation
+					(pilote de montgolfière et ballon captif), j&apos;ai fait le
+					choix de donner un nouveau cap à ma carrière en me
+					reconvertissant dans ce qui me passionne depuis toujours :
+					le développement web et software.
 				</TextContent>
 				<TextContent>
 					{' '}
