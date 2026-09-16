@@ -5,7 +5,7 @@ export default function LandingPage() {
 				Kevin BYTEBIER
 			</span>
 
-			<div className="w-full max-w-165 rounded-xl bg-[#0a0c07] border border-[#9BE800]/20 shadow-2xl overflow-hidden">
+			<div className="w-full max-w-165 rounded-xl bg-[#0a0c07] border border-lime-accent/20 shadow-2xl overflow-hidden">
 				{/* barre de titre */}
 				<div className="h-10 flex items-center gap-2 px-4 bg-[#12140d] border-b border-white/5 relative">
 					<span className="w-2.75 h-2.75 rounded-full bg-[#ff5f56]" />
