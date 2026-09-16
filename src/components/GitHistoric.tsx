@@ -81,7 +81,7 @@ export default function Changelog() {
 							href={commit.url}
 							target="_blank"
 							rel="noreferrer"
-							className="hover:text-white transition-colors min-w-0 break-words"
+							className="hover:text-white transition-colors min-w-0 wrap-break"
 						>
 							{commit.message}
 						</a>

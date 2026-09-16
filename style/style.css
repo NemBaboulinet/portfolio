@@ -44,6 +44,10 @@
     --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@theme {
+        --color-lime-accent: #9be800;
+}
+
 :root {
     --radius: 0.625rem;
     --background: oklch(1 0 0);
@@ -120,4 +124,9 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }

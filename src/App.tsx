@@ -3,7 +3,7 @@ import Section from './components/Section';
 import { SectionNav } from './components/SectionNav';
 import GitHistoric from './components/GitHistoric';
 import AboutMe from './components/AboutMe';
-import { H2 } from './components/TextStyle';
+import LandingPage from './components/LandingPage';
 
 export default function App() {
 	return (
@@ -26,7 +26,7 @@ export default function App() {
 			></SectionNav>
 			<Section id="hero">
 				<WarningModal />
-				<H2>Kevin BYTEBIER</H2>
+				<LandingPage />
 			</Section>
 			<Section id="aboutMe">
 				<AboutMe />
