@@ -15,6 +15,16 @@ export function H2({ children, className = '' }: TextStyleProps) {
 	);
 }
 
+export function H3({ children, className = '' }: TextStyleProps) {
+	return (
+		<h3
+			className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white ${className}`}
+		>
+			{children}
+		</h3>
+	);
+}
+
 export function Citation({ children, className = '' }: TextStyleProps) {
 	return (
 		<p
