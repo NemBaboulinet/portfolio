@@ -4,6 +4,7 @@ import { SectionNav } from './components/SectionNav';
 import GitHistoric from './components/GitHistoric';
 import AboutMe from './components/AboutMe';
 import LandingPage from './components/LandingPage';
+import ContactMe from './components/ContactMe';
 
 export default function App() {
 	return (
@@ -22,6 +23,10 @@ export default function App() {
 						id: 'gitHistoric',
 						label: 'Historique Git',
 					},
+					{
+						id: 'contactMe',
+						label: 'Me contacter',
+					},
 				]}
 			></SectionNav>
 			<Section id="hero">
@@ -33,6 +38,9 @@ export default function App() {
 			</Section>
 			<Section id="gitHistoric">
 				<GitHistoric />
+			</Section>
+			<Section id="contactMe">
+				<ContactMe />
 			</Section>
 		</>
 	);
