@@ -1,12 +1,15 @@
-import { H2 } from './TextStyle';
+import { H3, TextContent } from './TextStyle';
 
 export default function Projects() {
 	return (
-		<H2>
-			{' '}
-			Page en cours de construction veuillez m'excuser pour la gêne
-			occasionnée, je vous invite à vous diriger vers mon profil github
-			pour retrouver mes projets aboutis et en cours.{' '}
-		</H2>
+		<>
+			<H3> Page en cours de construction </H3>
+			<TextContent className="mt-8">
+				{' '}
+				Veuillez m&apos;excuser pour la gêne occasionnée, je vous invite
+				à vous diriger vers mon profil github pour retrouver mes projets
+				aboutis et en cours.{' '}
+			</TextContent>
+		</>
 	);
 }

@@ -4,6 +4,8 @@ import { SectionNav } from './components/SectionNav';
 import GitHistoric from './components/GitHistoric';
 import AboutMe from './components/AboutMe';
 import LandingPage from './components/LandingPage';
+import Projects from './components/Projects';
+import ContactMe from './components/ContactMe';
 
 export default function App() {
 	return (
