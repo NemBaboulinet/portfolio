@@ -37,7 +37,9 @@ export function Citation({ children, className = '' }: TextStyleProps) {
 
 export function TextContent({ children, className = '' }: TextStyleProps) {
 	return (
-		<p className={`max-w-2xl text-white/60 leading-relaxed ${className}`}>
+		<p
+			className={`max-w-prose text-base sm:text-lg md:text-xl text-white/60 leading-relaxed ${className}`}
+		>
 			{children}
 		</p>
 	);
