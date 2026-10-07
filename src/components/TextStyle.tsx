@@ -44,3 +44,13 @@ export function TextContent({ children, className = '' }: TextStyleProps) {
 		</p>
 	);
 }
+
+export function SubTitle({ children, className = '' }: TextStyleProps) {
+	return (
+		<h4
+			className={`text-[10px] sm:text-[11px] uppercase tracking-widest text-white/40 mb-2 ${className}`}
+		>
+			{children}
+		</h4>
+	);
+}
