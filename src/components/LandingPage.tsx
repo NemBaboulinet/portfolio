@@ -1,3 +1,5 @@
+import { AnimatedCursor } from './CardWindow';
+
 export default function LandingPage() {
 	return (
 		<div className="flex flex-col items-center px-6">
@@ -54,7 +56,7 @@ export default function LandingPage() {
 					</a>
 					<p>
 						<span className="text-lime-accent">❯</span>{' '}
-						<span className="inline-block w-2.25 h-4.25 bg-lime-accent align-[-3px] animate-[blink_1.1s_step-end_infinite]" />
+						<AnimatedCursor />
 					</p>
 				</div>
 			</div>
