@@ -20,7 +20,7 @@ export default function ContactMe() {
 		event.preventDefault();
 		const form = event.currentTarget;
 
-		const data = new FormData(event.currentTarget);
+		const data = new FormData(form);
 		// console.log(Object.fromEntries(data));
 		try {
 			setStatus('sending');
