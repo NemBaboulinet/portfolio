@@ -1,22 +1,64 @@
-import { H3, TextContent } from './TextStyle';
+import { useCallback, useState } from 'react';
+import { PROJECTS } from '../data/projects';
+import ProjectDial from './ProjectDial';
+import ProjectPreview from './ProjectPreview';
+import { TextContent } from './TextStyle';
 
 export default function Projects() {
+	const [active, setActive] = useState(0);
+
+	const step = useCallback(
+		(delta: -1 | 1) =>
+			setActive((i) => (i + delta + PROJECTS.length) % PROJECTS.length),
+		[],
+	);
+
+	const current = PROJECTS[active];
+	if (!current) return null;
+
 	return (
-		<>
-			<H3> Page en cours de construction </H3>
-			<TextContent className="mt-8">
-				Veuillez m&apos;excuser pour la gêne occasionnée, je vous invite
-				à vous diriger vers mon profil{' '}
-				<a
-					href="https://github.com/NemBaboulinet"
-					target="_blank"
-					rel="noreferrer noopener"
-					className="hover:text-white transition-colors underline underline-offset-4 decoration-lime-accent/50 hover:decoration-lime-accent"
-				>
-					github
-				</a>{' '}
-				pour y retrouver mes projets aboutis et en cours.
-			</TextContent>
-		</>
+		<div className="w-full h-full overflow-y-auto md:overflow-hidden flex flex-col md:flex-row md:items-center md:gap-14 md:pr-20">
+			<ProjectDial
+				projects={PROJECTS}
+				active={active}
+				onSelect={setActive}
+				onStep={step}
+			/>
+
+			<article className="flex-1 min-w-0 px-4 md:px-0 py-6 md:py-0">
+				<ProjectPreview
+					key={current.id}
+					media={current.preview}
+					label={current.name}
+				/>
+				<p className="font-mono text-xs uppercase tracking-[0.22em] text-white/55 mt-6 mb-3">
+					{current.stack}
+				</p>
+				{/* Pas H3 : trop grand pour des noms de projet longs */}
+				<h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
+					{current.name}
+				</h3>
+				<TextContent className="mt-4">{current.desc}</TextContent>
+				<div className="mt-6 pt-4 border-t border-white/10 max-w-140 flex flex-wrap items-center gap-x-8 gap-y-2">
+					{current.link ? (
+						<a
+							href={current.link.href}
+							target="_blank"
+							rel="noreferrer noopener"
+							className="text-lime-accent underline underline-offset-4 hover:text-white transition-colors"
+						>
+							{current.link.label} →
+						</a>
+					) : (
+						<span className="text-white/55">
+							Projet privé · code non public
+						</span>
+					)}
+					<span className="font-mono text-xs uppercase text-white/55">
+						{current.period}
+					</span>
+				</div>
+			</article>
+		</div>
 	);
 }
