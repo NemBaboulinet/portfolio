@@ -59,7 +59,7 @@ export default function ProjectDial({
 				ref={arcRef}
 				aria-label="Projets"
 				onKeyDown={handleKeyDown}
-				className="hidden md:block relative shrink-0 w-140 h-full overflow-hidden"
+				className="hidden md:block relative shrink-0 w-[clamp(28rem,40vw,48rem)] h-full overflow-hidden"
 			>
 				<div
 					aria-hidden="true"

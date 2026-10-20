@@ -23,7 +23,7 @@ export default function ProjectPreview({ media, label }: ProjectPreviewProps) {
 
 	return (
 		<>
-			<div className="relative w-full max-w-140 aspect-[16/10] bg-black/40 border-t border-lime-accent/35 overflow-hidden">
+			<div className="relative w-full max-w-140 aspect-16/10 bg-black/40 border-t border-lime-accent/35 overflow-hidden">
 				{media ? (
 					<>
 						<video
