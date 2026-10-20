@@ -40,6 +40,13 @@ export const PROJECTS: Project[] = [
 		stack: 'Docker Compose · Bash · Taskfile · Discord',
 		period: '2026',
 		desc: "Un serveur Ark: Survival Evolved lancé en quelques minutes avec Docker Compose, un script d'administration (sauvegarde, restauration, mise à jour) et des notifications Discord.",
+		preview: {
+			mp4: '/projects/ark/video.mp4',
+			webm: '/projects/ark/video.webm',
+			poster: '/projects/ark/poster.jpg',
+			caption:
+				'Pilotage du serveur Ark via automatissation · secrets masqués',
+		},
 		link: {
 			href: 'https://github.com/NemBaboulinet/ark-server',
 			label: 'Voir sur GitHub',
@@ -52,6 +59,13 @@ export const PROJECTS: Project[] = [
 		stack: 'React · TypeScript · Tailwind 4 · Ant Design 6 · Three.js',
 		period: '2026',
 		desc: 'Ce site : sections plein écran, fond en 3D, formulaire de contact et environnement reproductible avec Bun et un Dev Container.',
+		preview: {
+			mp4: '/projects/portfolio/video.mp4',
+			webm: '/projects/portfolio/video.webm',
+			poster: '/projects/portfolio/poster.jpg',
+			caption:
+				'Portfolio en 3D · sections, fond animé avec Three.js et React Three Fiber',
+		},
 		link: {
 			href: 'https://github.com/NemBaboulinet/portfolio',
 			label: 'Voir sur GitHub',
