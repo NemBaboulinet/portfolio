@@ -45,11 +45,31 @@ export default function LandingPage() {
 					</a>
 
 					<a
+						href="#projects"
+						className="group block text-white hover:text-[#c3ff4d]"
+					>
+						<span className="text-lime-accent">❯</span> cd ./projets{' '}
+						<span className="inline-block text-white/40 transition-transform group-hover:translate-x-1">
+							→
+						</span>
+					</a>
+
+					<a
 						href="#gitHistoric"
 						className="group block text-white hover:text-[#c3ff4d] mb-1"
 					>
 						<span className="text-lime-accent">❯</span> cd
 						./historique-git{' '}
+						<span className="inline-block text-white/40 transition-transform group-hover:translate-x-1">
+							→
+						</span>
+					</a>
+
+					<a
+						href="#contactMe"
+						className="group block text-white hover:text-[#c3ff4d]"
+					>
+						<span className="text-lime-accent">❯</span> cd ./contact{' '}
 						<span className="inline-block text-white/40 transition-transform group-hover:translate-x-1">
 							→
 						</span>
