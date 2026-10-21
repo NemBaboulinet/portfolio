@@ -51,7 +51,7 @@ export default function Projects() {
 						</a>
 					) : (
 						<span className="text-white/55">
-							Projet privé · code non public
+							Projet protégé · code non public
 						</span>
 					)}
 					<span className="font-mono text-xs uppercase text-white/55">
