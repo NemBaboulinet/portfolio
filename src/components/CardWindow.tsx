@@ -10,7 +10,7 @@ export function CardWindow({
 			<div className="h-10 flex items-center gap-2 px-4 bg-[#12140d] border-b border-white/5 relative">
 				{title}
 			</div>
-			<div className="p-4 sm:p-6">{children}</div>
+			<div className="p-3 sm:p-6">{children}</div>
 		</div>
 	);
 }
@@ -24,7 +24,7 @@ export function FieldBox({
 }) {
 	return (
 		<div
-			className={`border border-white/10 rounded-lg bg-white/3 px-3 py-2.5 sm:px-3.5 sm:py-3 text-xs sm:text-sm mb-4 sm:mb-5 ${className}`}
+			className={`border border-white/10 rounded-lg bg-white/3 px-3 py-2 sm:px-3.5 sm:py-3 text-xs sm:text-sm mb-3 sm:mb-5 ${className}`}
 		>
 			{children}
 		</div>
@@ -60,7 +60,7 @@ export function InputField({
 	return (
 		<input
 			{...props}
-			className={`w-full border border-white/10 rounded-lg bg-white/3 px-3 py-2.5 sm:px-3.5 sm:py-3 text-xs sm:text-sm mb-4 sm:mb-5 text-white outline-none focus:border-lime-accent caret-lime-accent placeholder:text-white/35 ${className}`}
+			className={`w-full border border-white/10 rounded-lg bg-white/3 px-3 py-2 sm:px-3.5 sm:py-3 text-xs sm:text-sm mb-3 sm:mb-5 text-white outline-none focus:border-lime-accent caret-lime-accent placeholder:text-white/35 ${className}`}
 		/>
 	);
 }
@@ -72,7 +72,7 @@ export function TextField({
 	return (
 		<textarea
 			{...props}
-			className={`w-full border border-white/10 rounded-lg bg-white/3 px-3 py-2.5 sm:px-3.5 sm:py-3 text-xs sm:text-sm mb-4 sm:mb-5 text-white outline-none focus:border-lime-accent caret-lime-accent resize-none placeholder:text-white/35 ${className}`}
+			className={`w-full border border-white/10 rounded-lg bg-white/3 px-3 py-2 sm:px-3.5 sm:py-3 text-xs sm:text-sm mb-3 sm:mb-5 text-white outline-none focus:border-lime-accent caret-lime-accent resize-none placeholder:text-white/35 ${className}`}
 		/>
 	);
 }

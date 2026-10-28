@@ -59,7 +59,7 @@ export default function ProjectDial({
 				ref={arcRef}
 				aria-label="Projets"
 				onKeyDown={handleKeyDown}
-				className="hidden md:block relative shrink-0 w-[clamp(28rem,40vw,48rem)] h-full overflow-hidden"
+				className="hidden lg:block relative shrink-0 w-[clamp(28rem,40vw,48rem)] h-full overflow-hidden"
 			>
 				<div
 					aria-hidden="true"
@@ -140,7 +140,7 @@ export default function ProjectDial({
 			<nav
 				aria-label="Projets"
 				onKeyDown={handleKeyDown}
-				className="md:hidden shrink-0 flex gap-5 overflow-x-auto px-4 pt-6 pb-3 border-b border-white/10"
+				className="lg:hidden shrink-0 flex gap-5 overflow-x-auto px-4 pt-2 pb-3 border-b border-white/10"
 			>
 				{projects.map((project, i) => (
 					<button

@@ -53,7 +53,7 @@ export default function Changelog() {
 	if (error) {
 		return (
 			<>
-				<h2 className="text-2xl font-bold text-white mb-4">
+				<h2 className="text-2xl font-bold text-white text-center mb-4">
 					Pour suivre l&apos;évolution de mon travail
 				</h2>
 				<p className="text-white/60">
@@ -64,8 +64,8 @@ export default function Changelog() {
 	}
 
 	return (
-		<>
-			<h2 className="text-2xl font-bold text-white mb-4">
+		<div className="flex flex-col items-center w-full px-4 sm:px-6">
+			<h2 className="text-2xl font-bold text-white text-center mb-4">
 				Pour suivre l&apos;évolution de mon travail
 			</h2>
 			<ul className=" flex flex-col gap-4 text-left max-w-2xl w-full border border-lime-accent/20 rounded-lg p-4 sm:p-6 md:p-8 backdrop-blur-xl bg-accent/10 max-h-[65dvh] overflow-y-auto">
@@ -81,7 +81,7 @@ export default function Changelog() {
 							href={commit.url}
 							target="_blank"
 							rel="noreferrer"
-							className="hover:text-white transition-colors min-w-0 wrap-break"
+							className="hover:text-white transition-colors min-w-0 wrap-break-word"
 						>
 							{commit.message}
 						</a>
@@ -95,6 +95,6 @@ export default function Changelog() {
 					</li>
 				))}
 			</ul>
-		</>
+		</div>
 	);
 }

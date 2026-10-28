@@ -2,7 +2,7 @@ import { AnimatedCursor } from './CardWindow';
 
 export default function LandingPage() {
 	return (
-		<div className="flex flex-col items-center px-6">
+		<div className="flex flex-col items-center w-full px-4 sm:px-6">
 			<span className="font-mono text-[13px] tracking-[0.22em] uppercase text-white/55 mb-6">
 				Kevin BYTEBIER
 			</span>
@@ -13,12 +13,12 @@ export default function LandingPage() {
 					<span className="w-2.75 h-2.75 rounded-full bg-[#ff5f56]" />
 					<span className="w-2.75 h-2.75 rounded-full bg-[#ffbd2e]" />
 					<span className="w-2.75 h-2.75 rounded-full bg-[#27c93f]" />
-					<span className="absolute left-1/2 -translate-x-1/2 font-mono text-xs text-white/40">
+					<span className="absolute left-1/2 -translate-x-1/2 max-w-[55%] truncate font-mono text-xs text-white/40">
 						kevin@portfolio — zsh
 					</span>
 				</div>
 
-				<div className="px-8 py-7 font-mono text-[15px] leading-[1.95]">
+				<div className="px-4 py-5 sm:px-8 sm:py-7 font-mono text-xs sm:text-[15px] leading-[1.95]">
 					<p className="text-white">
 						<span className="text-lime-accent">❯</span> whoami
 					</p>
@@ -29,8 +29,8 @@ export default function LandingPage() {
 					<p className="text-white">
 						<span className="text-lime-accent">❯</span> ls ./stack
 					</p>
-					<p className="text-white/60 mb-4">
-						React&nbsp;&nbsp;&nbsp;TypeScript&nbsp;&nbsp;&nbsp;Node.js&nbsp;&nbsp;&nbsp;Tailwind&nbsp;&nbsp;&nbsp;Git
+					<p className="flex flex-wrap text-white/60 mb-4">
+						React - TypeScript - Node.js - Tailwind - Git
 					</p>
 
 					<a

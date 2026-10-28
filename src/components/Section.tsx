@@ -16,7 +16,7 @@ export default function Section({
 	return (
 		<section
 			id={id}
-			className={`h-dvh w-full snap-start snap-always flex flex-col justify-center items-center ${bgStyle} ${className}`}
+			className={`min-h-dvh w-full pt-14 pb-4 md:py-0 snap-start snap-always flex flex-col justify-center items-center ${bgStyle} ${className}`}
 		>
 			{children}
 		</section>
