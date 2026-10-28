@@ -3,15 +3,19 @@ import { H2, TextContent, Citation } from './TextStyle';
 
 export default function AboutMe() {
 	return (
-		<Row gutter={[48, 32]} align="middle">
+		<Row
+			gutter={[{ xs: 16, md: 48 }, 16]}
+			align="middle"
+			className="w-full max-w-6xl px-4 md:px-6"
+		>
 			<Col xs={24} md={8}>
 				<img
 					src="/kbPortfolio.png"
 					alt="Kevin BYTEBIER"
-					className="aspect-square w-full max-w-xs mx-auto rounded-full object-cover"
+					className="aspect-square w-full sm:max-w-xs max-w-20 [@media(max-height:600px)]:hidden sm:[@media(max-height:600px)]:block mx-auto rounded-full object-cover"
 				/>
 			</Col>
-			<Col xs={24} md={16} className="space-y-4">
+			<Col xs={24} md={16} className="space-y-2 sm:space-y-4">
 				<H2>Kevin BYTEBIER</H2>
 				<Citation>«Du brûleur au clavier»</Citation>
 				<TextContent>

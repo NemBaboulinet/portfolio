@@ -23,7 +23,7 @@ export default function ProjectPreview({ media, label }: ProjectPreviewProps) {
 
 	return (
 		<>
-			<div className="relative w-full max-w-140 aspect-16/10 bg-black/40 border-t border-lime-accent/35 overflow-hidden">
+			<div className="relative w-3/5 sm:w-full max-w-140 aspect-16/10 bg-black/40 border-t border-lime-accent/35 overflow-hidden">
 				{media ? (
 					<>
 						<video
@@ -61,7 +61,7 @@ export default function ProjectPreview({ media, label }: ProjectPreviewProps) {
 					</div>
 				)}
 			</div>
-			<p className="font-mono text-xs tracking-wider text-white/55 mt-3">
+			<p className="hidden sm:block font-mono text-xs tracking-wider text-white/55 mt-3">
 				{media?.caption ?? label}
 			</p>
 		</>

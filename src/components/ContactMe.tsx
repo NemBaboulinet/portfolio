@@ -48,10 +48,12 @@ export default function ContactMe() {
 	}
 
 	return (
-		<>
-			<H3>Travaillons ensemble</H3>
-			<Citation>Une alternance, une idée, un projet ?</Citation>
-			<div className="mt-6">
+		<div className="flex flex-col items-center w-full px-4 sm:px-6">
+			<H3 className="text-center">Travaillons ensemble</H3>
+			<Citation className="text-center">
+				Une alternance, une idée, un projet ?
+			</Citation>
+			<div className="mt-3 sm:mt-6 w-full flex justify-center">
 				<CardWindow
 					title={
 						<>
@@ -106,7 +108,7 @@ export default function ContactMe() {
 							id="description"
 							placeholder="Decrivez votre projet, vos besoins ou une demande d'information?"
 							required
-							rows={4}
+							rows={3}
 						></TextField>
 
 						<SubTitle>Pièce jointe</SubTitle>
@@ -123,13 +125,17 @@ export default function ContactMe() {
 									</p>
 								</div>
 							</div>
-							<a href="/CVKevinBYTEBIER.pdf" download>
+							<a
+								className="shrink-0"
+								href="/CVKevinBYTEBIER.pdf"
+								download
+							>
 								<Pin>Télécharger</Pin>
 							</a>
 						</FieldBox>
 
-						<SubTitle>Labels</SubTitle>
-						<div className="flex gap-2">
+						<SubTitle className="hidden sm:block">Labels</SubTitle>
+						<div className="hidden sm:flex flex-wrap gap-2">
 							<Pin className="inline-flex items-center gap-1.5">
 								<span className="size-1.5 rounded-full bg-lime-accent" />
 								alternance
@@ -151,6 +157,6 @@ export default function ContactMe() {
 					</form>
 				</CardWindow>
 			</div>
-		</>
+		</div>
 	);
 }

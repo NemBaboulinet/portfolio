@@ -17,7 +17,7 @@ export default function Projects() {
 	if (!current) return null;
 
 	return (
-		<div className="w-full h-full overflow-y-auto md:overflow-hidden flex flex-col md:flex-row md:items-center md:gap-14 md:pr-20">
+		<div className="w-full lg:h-dvh overflow-y-auto lg:overflow-hidden flex flex-col lg:flex-row lg:items-center lg:gap-14 lg:pr-20">
 			<ProjectDial
 				projects={PROJECTS}
 				active={active}
@@ -25,21 +25,23 @@ export default function Projects() {
 				onStep={step}
 			/>
 
-			<article className="flex-1 min-w-0 px-4 md:px-0 py-6 md:py-0">
+			<article className="flex-1 min-w-0 px-4 lg:px-0 py-3 lg:py-0">
 				<ProjectPreview
 					key={current.id}
 					media={current.preview}
 					label={current.name}
 				/>
-				<p className="font-mono text-xs uppercase tracking-[0.22em] text-white/55 mt-6 mb-3">
+				<p className="font-mono text-xs uppercase tracking-[0.22em] text-white/55 mt-3 sm:mt-6 mb-2 sm:mb-3">
 					{current.stack}
 				</p>
 				{/* Pas H3 : trop grand pour des noms de projet longs */}
-				<h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
+				<h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
 					{current.name}
 				</h3>
-				<TextContent className="mt-4">{current.desc}</TextContent>
-				<div className="mt-6 pt-4 border-t border-white/10 max-w-140 flex flex-wrap items-center gap-x-8 gap-y-2">
+				<TextContent className="mt-2 sm:mt-4">
+					{current.desc}
+				</TextContent>
+				<div className="mt-3 sm:mt-6 pt-3 sm:pt-4 border-t border-white/10 max-w-140 flex flex-wrap items-center gap-x-8 gap-y-2">
 					{current.link ? (
 						<a
 							href={current.link.href}
