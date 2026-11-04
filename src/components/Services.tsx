@@ -1,3 +1,4 @@
+import { Row, Col } from 'antd';
 import { SERVICES } from '../data/services';
 import { CardWindow } from './CardWindow';
 import { Citation, H3, TextContent } from './TextStyle';
@@ -10,12 +11,16 @@ export default function Services() {
 				Cinq domaines, un seul interlocuteur
 			</Citation>
 
-			<div className="mt-3 sm:mt-8 w-full flex flex-wrap justify-center gap-3 sm:gap-6">
+			<Row
+				gutter={[
+					{ xs: 12, sm: 24 },
+					{ xs: 12, sm: 24 },
+				]}
+				justify="center"
+				className="mt-3 sm:mt-8 w-full"
+			>
 				{SERVICES.map((service) => (
-					<div
-						key={service.id}
-						className="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] flex"
-					>
+					<Col key={service.id} xs={24} md={12} lg={8}>
 						<CardWindow
 							title={
 								<>
@@ -48,9 +53,9 @@ export default function Services() {
 								{service.stack}
 							</p>
 						</CardWindow>
-					</div>
+					</Col>
 				))}
-			</div>
+			</Row>
 
 			<a
 				href="#contactMe"
