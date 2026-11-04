@@ -23,14 +23,22 @@ export default function LandingPage() {
 						<span className="text-lime-accent">❯</span> whoami
 					</p>
 					<p className="text-white/60 mb-4">
-						kevin_bytebier - développeur «full-stack» junior
+						kevin_bytebier - développeur «full-stack» freelance
+					</p>
+
+					<p className="text-white">
+						<span className="text-lime-accent">❯</span> cat ./statut
+					</p>
+					<p className="text-white/60 mb-4">
+						<span className="inline-block size-2 rounded-full bg-lime-accent mr-2 animate-pulse" />
+						disponible - Marne &amp; full remote
 					</p>
 
 					<p className="text-white">
 						<span className="text-lime-accent">❯</span> ls ./stack
 					</p>
 					<p className="flex flex-wrap text-white/60 mb-4">
-						React - TypeScript - Node.js - Tailwind - Git
+						React - TypeScript - Node.js - Docker - CI/CD
 					</p>
 
 					<a

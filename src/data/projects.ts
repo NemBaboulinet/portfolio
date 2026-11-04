@@ -23,7 +23,7 @@ export const PROJECTS: Project[] = [
 		short: 'Dubrulle-Downs',
 		name: 'Dubrulle-Downs · SAALTO',
 		stack: 'React 19 · TypeScript · Ant Design 6 · Jotai',
-		period: 'Stage · janv – juin 2026',
+		period: 'Mission · janv – juin 2026',
 		desc: "Portail de traçabilité et de logistique agricole. Refonte du tunnel de création de tâches : un seul formulaire qui s'adapte au type de tâche. En parallèle : migration Ant Design 5 → 6 et passage de Chart.js à Highcharts.",
 		preview: {
 			mp4: '/projects/downs/video.mp4',
