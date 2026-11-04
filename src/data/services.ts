@@ -47,15 +47,15 @@ export const SERVICES: Service[] = [
 	},
 	{
 		id: 'automation',
-		file: 'automatisation.md',
-		name: 'Automatisation',
+		file: 'automatisation-ia.md',
+		name: 'Automatisation & IA',
 		desc: 'Des scripts et des outils pour supprimer les tâches répétitives et fiabiliser vos opérations.',
 		items: [
-			'Scripts Bash et tâches planifiées',
-			'Sauvegarde, restauration et mise à jour',
-			'Notifications (Discord, e-mail)',
+			'IA : tâches quotidiennes, répétitives, tri, résumé et réponses automatiques (e-mails)',
+			'Intégration d’API IA dans vos outils',
+			'Scripts, tâches planifiées et notifications',
 		],
-		stack: 'Bash · Taskfile · Node.js',
+		stack: 'API LLM · Node.js · Bash',
 	},
 	{
 		id: 'devops',
