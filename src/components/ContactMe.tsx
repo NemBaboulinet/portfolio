@@ -10,6 +10,7 @@ import {
 import { FileTextOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 import { message } from 'antd';
+import { CONTACT_LINKS } from '../data/contact';
 
 export default function ContactMe() {
 	const [status, setStatus] = useState<
@@ -160,6 +161,21 @@ export default function ContactMe() {
 						</ButtonStyle>
 					</form>
 				</CardWindow>
+			</div>
+			<div className="flex flex-wrap justify-center gap-x-6 sm:gap-x-9 gap-y-1 mt-3 sm:mt-7 font-mono text-xs sm:text-[13px]">
+				{CONTACT_LINKS.map((link) => (
+					<a
+						key={link.label}
+						href={link.href}
+						{...(link.external && {
+							target: '_blank',
+							rel: 'noreferrer noopener',
+						})}
+						className="text-white/55 hover:text-white transition-colors"
+					>
+						<span className="text-lime-accent">❯</span> {link.label}
+					</a>
+				))}
 			</div>
 		</div>
 	);
