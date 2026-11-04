@@ -25,7 +25,7 @@ export default function Services() {
 						xs={24}
 						md={12}
 						lg={8}
-						className="flex"
+						className="flex!"
 					>
 						<CardWindow
 							className="flex flex-col"
