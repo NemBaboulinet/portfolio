@@ -1,4 +1,5 @@
-import WarningModal from './components/Modal';
+// Modale « Work in progress » désactivée, pourrait resservir
+// import WarningModal from './components/Modal';
 import Section from './components/Section';
 import { SectionNav } from './components/SectionNav';
 import GitHistoric from './components/GitHistoric';
@@ -35,7 +36,7 @@ export default function App() {
 				]}
 			></SectionNav>
 			<Section id="hero">
-				<WarningModal />
+				{/* <WarningModal /> */}
 				<LandingPage />
 			</Section>
 			<Section id="aboutMe">

@@ -1,5 +1,6 @@
 import { Row, Col } from 'antd';
 import { H2, TextContent, Citation } from './TextStyle';
+import { Pin } from './CardWindow';
 
 export default function AboutMe() {
 	return (
@@ -27,15 +28,21 @@ export default function AboutMe() {
 					le développement web et software.
 				</TextContent>
 				<TextContent>
-					{' '}
-					En tant que développeur «Full-Stack» Junior, je combine la
-					maturité du monde de l&apos;entreprise avec un écosystème
-					technique moderne. Je suis actuellement basé à Épernay et je
-					prépare un diplôme de Concepteur Développeur
-					d&apos;Applications (CDA) au CESI de Reims, tout en
-					recherchant une alternance dans la région (Reims, Épernay,
-					Chalons-en- Champagne) ou à distance.
+					Aujourd&apos;hui développeur freelance (micro-entreprise),
+					je combine la maturité du monde de l&apos;entreprise avec un
+					écosystème technique moderne. Titulaire d&apos;un titre RNCP
+					niveau 5 obtenu au CESI de Reims, je suis basé dans la Marne
+					et disponible pour des missions en full remote.
 				</TextContent>
+				<div className="flex flex-wrap gap-2 pt-1">
+					{['Applications web', 'Automatisation', 'DevOps'].map(
+						(service) => (
+							<Pin key={service} className="text-xs sm:text-sm">
+								{service}
+							</Pin>
+						),
+					)}
+				</div>
 			</Col>
 		</Row>
 	);

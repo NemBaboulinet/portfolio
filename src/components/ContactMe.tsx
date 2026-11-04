@@ -51,7 +51,7 @@ export default function ContactMe() {
 		<div className="flex flex-col items-center w-full px-4 sm:px-6">
 			<H3 className="text-center">Travaillons ensemble</H3>
 			<Citation className="text-center">
-				Une alternance, une idée, un projet ?
+				Une mission, une idée, un projet ?
 			</Citation>
 			<div className="mt-3 sm:mt-6 w-full flex justify-center">
 				<CardWindow
@@ -138,7 +138,11 @@ export default function ContactMe() {
 						<div className="hidden sm:flex flex-wrap gap-2">
 							<Pin className="inline-flex items-center gap-1.5">
 								<span className="size-1.5 rounded-full bg-lime-accent" />
-								alternance
+								mission
+							</Pin>
+							<Pin className="inline-flex items-center gap-1.5">
+								<span className="size-1.5 rounded-full bg-lime-accent" />
+								devis
 							</Pin>
 							<Pin className="inline-flex items-center gap-1.5">
 								<span className="size-1.5 rounded-full bg-lime-accent" />
