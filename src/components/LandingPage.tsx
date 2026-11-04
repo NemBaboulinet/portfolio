@@ -63,6 +63,17 @@ export default function LandingPage() {
 					</a>
 
 					<a
+						href="#services"
+						className="group block text-white hover:text-[#c3ff4d]"
+					>
+						<span className="text-lime-accent">❯</span> cd
+						./services{' '}
+						<span className="inline-block text-white/40 transition-transform group-hover:translate-x-1">
+							→
+						</span>
+					</a>
+
+					<a
 						href="#gitHistoric"
 						className="group block text-white hover:text-[#c3ff4d] mb-1"
 					>
