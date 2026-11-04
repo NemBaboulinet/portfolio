@@ -26,6 +26,11 @@ export default function Projects() {
 			/>
 
 			<article className="flex-1 min-w-0 px-4 lg:px-0 py-3 lg:py-0">
+				<p className="font-mono text-sm sm:text-lg lg:text-xl tracking-[0.22em] uppercase text-white/55 mb-3 sm:mb-5">
+					<span className="text-lime-accent">❯</span> Mes projets ·{' '}
+					{String(active + 1).padStart(2, '0')}/
+					{String(PROJECTS.length).padStart(2, '0')}
+				</p>
 				<ProjectPreview
 					key={current.id}
 					media={current.preview}

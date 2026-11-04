@@ -5,6 +5,7 @@ import { SectionNav } from './components/SectionNav';
 import GitHistoric from './components/GitHistoric';
 import AboutMe from './components/AboutMe';
 import LandingPage from './components/LandingPage';
+import Services from './components/Services';
 import Projects from './components/Projects';
 import ContactMe from './components/ContactMe';
 
@@ -26,6 +27,10 @@ export default function App() {
 						label: 'Mes projets',
 					},
 					{
+						id: 'services',
+						label: 'Mes services',
+					},
+					{
 						id: 'gitHistoric',
 						label: 'Historique Git',
 					},
@@ -44,6 +49,9 @@ export default function App() {
 			</Section>
 			<Section id="projects">
 				<Projects />
+			</Section>
+			<Section id="services">
+				<Services />
 			</Section>
 			<Section id="gitHistoric">
 				<GitHistoric />
