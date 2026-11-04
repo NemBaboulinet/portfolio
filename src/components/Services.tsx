@@ -20,8 +20,16 @@ export default function Services() {
 				className="mt-3 sm:mt-8 w-full"
 			>
 				{SERVICES.map((service) => (
-					<Col key={service.id} xs={24} md={12} lg={8}>
+					<Col
+						key={service.id}
+						xs={24}
+						md={12}
+						lg={8}
+						className="flex"
+					>
 						<CardWindow
+							className="flex flex-col"
+							bodyClassName="flex flex-1 flex-col"
 							title={
 								<>
 									<span className="w-2.75 h-2.75 rounded-full bg-[#ff5f56]" />
@@ -39,7 +47,7 @@ export default function Services() {
 							<TextContent className="mt-1 sm:mt-2 text-xs! sm:text-sm!">
 								{service.desc}
 							</TextContent>
-							<ul className="mt-2 sm:mt-4 space-y-1 font-mono text-xs sm:text-[13px] leading-relaxed text-white/75">
+							<ul className="mt-2 sm:mt-4 mb-2 sm:mb-4 space-y-1 font-mono text-xs sm:text-[13px] leading-relaxed text-white/75">
 								{service.items.map((item) => (
 									<li key={item}>
 										<span className="text-lime-accent">
@@ -49,7 +57,7 @@ export default function Services() {
 									</li>
 								))}
 							</ul>
-							<p className="mt-2 sm:mt-4 pt-2 sm:pt-3 border-t border-white/10 font-mono text-[11px] uppercase tracking-[0.18em] text-white/55">
+							<p className="mt-auto pt-2 sm:pt-3 border-t border-white/10 font-mono text-[11px] uppercase tracking-[0.18em] text-white/55">
 								{service.stack}
 							</p>
 						</CardWindow>
