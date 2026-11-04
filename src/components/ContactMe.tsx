@@ -121,13 +121,13 @@ export default function ContactMe() {
 										CVKevinBYTEBIER.pdf
 									</p>
 									<p className="text-[11px] text-white/35 mt-0.5">
-										246 Ko
+										265 Ko
 									</p>
 								</div>
 							</div>
 							<a
 								className="shrink-0"
-								href="/CVKevinBYTEBIER.pdf"
+								href="/projects/CVKevinBYTEBIER.pdf"
 								download
 							>
 								<Pin>Télécharger</Pin>
