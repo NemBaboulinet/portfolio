@@ -150,8 +150,18 @@ export default function ContactMe() {
 								collaboration
 							</Pin>
 						</div>
+						<p className="text-[11px] text-white/55 mt-4">
+							Ces données servent uniquement à répondre à votre
+							demande.{' '}
+							<a
+								href="/confidentialite.html"
+								className="underline hover:text-white"
+							>
+								Politique de confidentialité
+							</a>
+						</p>
 						<ButtonStyle
-							className="flex items-center gap-2 mt-4"
+							className="flex items-center gap-2 mt-3"
 							type="submit"
 							disabled={status === 'sending'}
 						>
@@ -177,6 +187,15 @@ export default function ContactMe() {
 					</a>
 				))}
 			</div>
+			<p className="mt-3 font-mono text-[11px] text-white/45">
+				<a href="/mentions-legales.html" className="hover:text-white">
+					Mentions légales
+				</a>
+				{' · '}
+				<a href="/confidentialite.html" className="hover:text-white">
+					Confidentialité
+				</a>
+			</p>
 		</div>
 	);
 }
