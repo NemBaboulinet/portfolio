@@ -187,15 +187,6 @@ export default function ContactMe() {
 					</a>
 				))}
 			</div>
-			<p className="mt-3 font-mono text-[11px] text-white/45">
-				<a href="/mentions-legales.html" className="hover:text-white">
-					Mentions légales
-				</a>
-				{' · '}
-				<a href="/confidentialite.html" className="hover:text-white">
-					Confidentialité
-				</a>
-			</p>
 		</div>
 	);
 }
