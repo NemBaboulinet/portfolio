@@ -34,7 +34,11 @@ export function MenuBurger({
 				placement="right"
 				open={isOpen}
 				onClose={() => setIsOpen(false)}
-				closable={false}
+				title="Menu"
+				closable={{
+					placement: 'end',
+					'aria-label': 'Fermer le menu',
+				}}
 			>
 				<nav aria-label="Navigation par sections (mobile)">
 					{items.map((item, index) => (
