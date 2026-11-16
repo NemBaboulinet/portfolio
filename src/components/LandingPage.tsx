@@ -3,9 +3,9 @@ import { AnimatedCursor } from './CardWindow';
 export default function LandingPage() {
 	return (
 		<div className="flex flex-col items-center w-full px-4 sm:px-6">
-			<span className="font-mono text-[13px] tracking-[0.22em] uppercase text-white/55 mb-6">
+			<h1 className="font-mono text-[13px] tracking-[0.22em] uppercase text-white/55 mb-6">
 				Kevin BYTEBIER
-			</span>
+			</h1>
 
 			<div className="w-full max-w-165 rounded-xl bg-[#0a0c07] border border-lime-accent/20 shadow-2xl overflow-hidden">
 				{/* barre de titre */}
@@ -31,7 +31,7 @@ export default function LandingPage() {
 					</p>
 					<p className="text-white/60 mb-4">
 						<span className="inline-block size-2 rounded-full bg-lime-accent mr-2 animate-pulse" />
-						disponible - Marne &amp; full remote
+						disponible - Épernay (Marne) &amp; full remote
 					</p>
 
 					<p className="text-white">
