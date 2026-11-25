@@ -26,3 +26,8 @@ bun.lockb
 NOTES.md
 downs.md
 CLAUDE.local.md
+
+# Analytics (export)
+scripts/analytics/.env
+scripts/analytics/*.xlsx
+scripts/analytics/*.html
