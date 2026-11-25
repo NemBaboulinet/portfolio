@@ -38,6 +38,30 @@ Sans cette variable, l'envoi du formulaire de contact échoue. Sur Vercel, la d�
 | `bun run lint-fix`    | ESLint avec correction automatique       |
 | `bun run format`      | Prettier sur `src/`                      |
 
+## Export des statistiques (optionnel)
+
+Le dossier `scripts/analytics/` contient un script autonome (hors site, exclu du build, de Vercel et d'ESLint) qui exporte les statistiques **Vercel Web Analytics** (visiteurs, pages vues, sources, pages, pays) vers un fichier Excel, puis génère un tableau de bord HTML.
+
+```bash
+cd scripts/analytics
+bun install
+# créer scripts/analytics/.env avec les variables ci-dessous (jamais commité)
+node export.mjs              # recalcule les 14 derniers jours
+node export.mjs --since 2026-01-01 --from 2026-06-01
+```
+
+| Variable            | Rôle                                                   |
+| ------------------- | ------------------------------------------------------ |
+| `VERCEL_TOKEN`      | Jeton d'API Vercel (lecture des analytics), obligatoire |
+| `VERCEL_PROJECT_ID` | Identifiant du projet Vercel, obligatoire              |
+| `VERCEL_TEAM_SLUG`  | Slug de l'équipe, uniquement pour un projet d'équipe   |
+
+- `--since AAAA-MM-JJ` : premier jour à (re)calculer. Sans option, les 14 derniers jours sont recalculés pour rattraper les jours manquants.
+- `--from AAAA-MM-JJ` : début de la période affichée dans le dashboard. Le fichier Excel conserve tout l'historique.
+- Sorties : `visiteurs.xlsx` et `dashboard.html`, générés localement.
+
+> **Sécurité** : ne jamais commiter le jeton ni les fichiers générés. `.env`, `.env.local`, `*.xlsx` et `*.html` de ce dossier sont ignorés par Git, et les données de visite ne doivent pas être publiées.
+
 ## Structure
 
 ```
@@ -48,6 +72,7 @@ src/
     ├── projects.ts    # Projets affichés (cadran + prévisualisation vidéo)
     ├── services.ts    # Cartes de services
     └── contact.ts     # Liens de contact (e-mail, LinkedIn, GitHub)
+scripts/analytics/   # Export des statistiques Vercel (hors site)
 public/
 ├── projects/          # Médias des projets (vidéo mp4/webm + poster)
 └── kbPortfolio.png
