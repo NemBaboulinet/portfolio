@@ -56,9 +56,9 @@ export const PROJECTS: Project[] = [
 		id: 'portfolio',
 		short: 'Portfolio',
 		name: 'Portfolio',
-		stack: 'React · TypeScript · Tailwind 4 · Ant Design 6 · Three.js',
+		stack: 'React · TypeScript · Tailwind 4 · Ant Design 6 · Three.js · Bun · ExcelJS',
 		period: '2026',
-		desc: 'Ce site : sections plein écran, fond en 3D, formulaire de contact et environnement reproductible avec Bun et un Dev Container.',
+		desc: 'Ce site : sections plein écran, fond en 3D, formulaire de contact, export des statistiques vers Excel avec tableau de bord et environnement reproductible avec Bun et un Dev Container.',
 		preview: {
 			mp4: '/projects/portfolio/video.mp4',
 			webm: '/projects/portfolio/video.webm',
