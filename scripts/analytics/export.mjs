@@ -205,6 +205,17 @@ function writeSheet(workbook, sheet, rows) {
 	);
 }
 
+// ---------- Barre de progression ----------
+
+function progress(done, total, label) {
+	const width = 40;
+	const ratio = done / total;
+	const filled = Math.round(ratio * width);
+	const bar = '█'.repeat(filled) + '-'.repeat(width - filled);
+	const percent = Math.round(ratio * 100);
+	process.stdout.write(`\r\x1b[2K[${bar}] ${percent}% ${label}`);
+}
+
 // ---------- 7. Programme principal ----------
 
 const workbook = new ExcelJS.Workbook();
@@ -213,13 +224,18 @@ if (existsSync(OUT_FILE)) await workbook.xlsx.readFile(OUT_FILE);
 const days = daysBetween(since, today);
 console.log(`Export du ${since} au ${today} (${days.length} jours)`);
 
+const total = SHEETS.length * days.length;
+let done = 0;
+
 const allRows = {};
+progress(0, total, 'Connexion…');
 for (const sheet of SHEETS) {
 	const rows = readRows(workbook, sheet);
 	for (const day of days) {
 		// On remplace toutes les lignes du jour, pour éviter les valeurs périmées.
 		for (const [key, row] of rows) if (row.Date === day) rows.delete(key);
 		const data = await query(day, sheet.by);
+		progress(++done, total, sheet.name);
 		// Jour sans visite : l'API ne renvoie rien, on écrit une ligne à 0.
 		if (sheet.fillEmpty && data.length === 0) {
 			data.push({ visitors: 0, pageviews: 0 });
@@ -231,6 +247,7 @@ for (const sheet of SHEETS) {
 	}
 	writeSheet(workbook, sheet, rows);
 	allRows[sheet.name] = [...rows.values()];
+	process.stdout.write('\r\x1b[2K'); // efface la barre
 	console.log(`  ${sheet.name} : ${rows.size} lignes`);
 }
 
